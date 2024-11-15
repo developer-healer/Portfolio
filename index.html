@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANATO ITO | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="layout-bg-wrapper visual-bg-wrapper">
-        <video autoplay muted loop class="layout-bg-video visual-bg-video">
-            <source src="source/home-bg-video.mp4" type="video/mp4">
-        </video>
-    </div>
     <header class="layout-header visual-header">
         <p class="layout-logo visual-logo">MANATO ITO</p>
         <nav class="layout-pc-nav visual-pc-nav">
@@ -23,5 +19,20 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="layout-home visual-home">
+            <div class="layout-bg-wrapper visual-bg-wrapper">
+                <video autoplay muted loop class="layout-bg-video visual-bg-video">
+                    <source src="source/home-bg-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="layout-overlay visual-overlay">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Explore My Work and Skills</p>
+                <a href="#" class="layout-home-btn visual-home-btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
