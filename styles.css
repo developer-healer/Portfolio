@@ -4,6 +4,9 @@ body {
     background-color: black;
     font-family: 'Orbitron', sans-serif;
 }
+.mobile-design {
+    display: none;
+}
 .layout-header {
     width: 100%;
     height: 10vh;
@@ -50,9 +53,6 @@ body {
     font-weight: bold;
 }
 
-.layout-mobile-nav {
-    display: none;
-}
 .layout-pc-nav ul {
     display: flex;
     flex-direction: row;
@@ -129,10 +129,10 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .layout-pc-nav {
+    .pc-design {
         display: none;
     }
-    .layout-mobile-nav {
+    .mobile-design {
         display: block;
     }
     .layout-header {
@@ -156,10 +156,11 @@ body {
         min-height: 30vh;
     }
     .visual-overlay h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .visual-overlay p {
         font-size: 0.9rem;
+        margin: 0.5rem 0;
     }
     .layout-home-btn {
         padding: 0.25rem 0.75rem;
