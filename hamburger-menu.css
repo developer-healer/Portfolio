@@ -1,4 +1,5 @@
-@media screen and (max-width: 480px) {
+/* タブレット&モバイル対応 */
+@media screen and (max-width: 860px) {
     .nav-btn:checked + label + ul {
         transform: scale(1, 1);
         transform-origin: top;
@@ -16,14 +17,14 @@
         display: inline-block;
         position: relative;
         cursor: pointer;
-        padding: 24px 14px;
+        padding: 1rem 0.7rem 0.7rem 0.7rem;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     .nav-icon-inner {
         background: #ddd;
         display: block;
-        height: 3px;
-        width: 26px;
+        height: 0.2rem;
+        width: 1.4rem;
         position: relative;
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
@@ -37,10 +38,10 @@
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
     .nav-icon-inner:before {
-        top: 9px;
+        top: 0.5rem;
     }
     .nav-icon-inner:after {
-        bottom: 9px;
+        bottom: 0.5rem;
     }
     .nav-btn:checked ~ .nav-icon-wrapper .nav-icon-inner:before {
         transform: rotate(-45deg);
@@ -58,20 +59,22 @@
         background: rgba(0, 0, 0, 0);
         transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
+
     .template-nav ul {
         list-style: none;
         position: absolute;
         width: 100%;
         height: auto;
         top: 0;
-        margin-top: 52px;
-        padding: 0 0 10px 0;
+        margin-top: 7vh;
+        padding: 0 0 2rem 0;
         clear: both;
         background: var(--background-navbar);
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
         transform: scale(1, 0);
         transform-origin: top;
     }
+    /*
     .template-nav ul a {
         text-decoration: none;
         font-weight: 500;
@@ -88,5 +91,5 @@
         margin: 0 54px;
         opacity: 0;
         transition: 0.5s;
-    }
+    }*/
 }

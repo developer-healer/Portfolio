@@ -1,12 +1,24 @@
+/* 基本スタイル */
+html {
+    font-size: 16px;
+}
 body {
     padding: 0;
     margin: 0;
     background-color: black;
     font-family: 'Orbitron', sans-serif;
+    width: 100vw;
 }
-.mobile-design {
+
+/* レスポンシブ切り替え */
+.tablet-design, .mobile-design {
     display: none;
 }
+.pc-design {
+    display: block;
+}
+
+/* ヘッダー */
 .layout-header {
     width: 100%;
     height: 10vh;
@@ -53,6 +65,7 @@ body {
     font-weight: bold;
 }
 
+/* ナビゲーション */
 .layout-pc-nav ul {
     display: flex;
     flex-direction: row;
@@ -75,6 +88,7 @@ body {
     color: #007BFF;
 }
 
+/* メインセクション */
 .layout-home {
     display: flex;
     justify-content: center;
@@ -85,9 +99,8 @@ body {
     box-sizing: border-box;
     position: relative;
 }
-
 .layout-overlay {
-    width: 80%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -128,42 +141,104 @@ body {
     background-color: #005663;
 }
 
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 1.4vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 1.4vw;
+    }
+}
+
+/* タブレット対応 */
+@media screen and (max-width: 860px) {
+    .pc-design, .mobile-design {
+        display: none;
+    }
+    .tablet-design {
+        display: block;
+    }
+    .layout-header {
+        padding-left: 3vw;
+        flex-direction: row-reverse;
+        justify-content: left;
+        height: 8vh;
+        position: fixed;
+    }
+    .layout-mobile-nav {
+        margin-right: 2vw;
+    }
+    html {
+        font-size: 1.5vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 1.65vw;
+    }
+}  
+
+/* モバイル対応 */
 @media screen and (max-width: 480px) {
-    .pc-design { /**/
+    .pc-design, .tablet-design {
         display: none;
     }
     .mobile-design {
         display: block;
     }
     .layout-header {
+        height: 7vh;
+        padding-left: 3vw;
         position: relative;
-        height: 8vh;
+        flex-direction: row-reverse;
+        justify-content: left;
     }
     .visual-header {
         background-color: rgb(0, 0, 0);
     }
     .visual-logo {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
-
-    .layout-bg-video {
-        height: 30vh;
-    }
-    .layout-bg-wrapper {
-        height: 30vh;
+    .layout-mobile-nav {
+        margin-right: 2vw;
     }
     .layout-home {
-        min-height: 30vh;
+        display: revert;
+        min-height: revert;
+        padding: 0;
+    }
+    .layout-bg-wrapper {
+        height: 40vh;
+        position: revert;
+    }
+    .layout-bg-img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+    }
+    .layout-overlay {
+        text-align: left;
+        position: revert;
+        transform: revert;
+        padding: 1.5rem;
     }
     .visual-overlay h1 {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
+    }
+    .layout-overlay p {
+        margin: 2rem 0;;
     }
     .visual-overlay p {
-        font-size: 0.9rem;
-        margin: 0.5rem 0;
+        font-size: 1rem;
     }
-    .layout-home-btn {
-        padding: 0.25rem 0.75rem;
-        font-size: 0.6rem;
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 5vw;
     }
 }
