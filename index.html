@@ -2,21 +2,29 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>MANATO ITO | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburger-menu.css">
 </head>
 <body>
     <header class="layout-header visual-header">
         <p class="layout-logo visual-logo">MANATO ITO</p>
-        <nav class="layout-pc-nav visual-pc-nav">
+        <template class="template-nav-content">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+        </template>
+        <nav class="layout-pc-nav visual-pc-nav template-nav"></nav>
+        <nav class="layout-mobile-nav visual-mobile-nav template-nav">
+            <input type="checkbox" class="nav-btn" id="nav-btn">
+            <label for="nav-btn" class="nav-icon-wrapper">
+                <span class="nav-icon-inner"></span>
+            </label>
         </nav>
     </header>
     <main>

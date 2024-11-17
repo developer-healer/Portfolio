@@ -1,14 +1,12 @@
-let max = 0.0;
-
 window.addEventListener('DOMContentLoaded', function(){
-    let background_video_element = document.getElementsByClassName('layout-bg-video')[0];
-    background_video_element.playbackRate = 1;
-});
+    let template_nav_content = document.getElementsByClassName('template-nav-content')[0];
+    let template_nav_list = document.getElementsByClassName('template-nav');
 
-f = function() {
-    let background_video_element = document.getElementsByClassName('layout-bg-video')[0];
-    if(background_video_element.currentTime > max) {
-        max = background_video_element.currentTime;
+    for(let count = 0; count < template_nav_list.length; count++) {
+        let template_nav_content_cpy = template_nav_content.content.cloneNode(true);
+        template_nav_list[count].appendChild(template_nav_content_cpy);
     }
-    console.log(max);
-};
+
+    let background_video_element = document.getElementsByClassName('layout-bg-video')[0];
+    background_video_element.playbackRate = 0.9;
+});
