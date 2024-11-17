@@ -129,7 +129,7 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .pc-design {
+    .pc-design { /**/
         display: none;
     }
     .mobile-design {
