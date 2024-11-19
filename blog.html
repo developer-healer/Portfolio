@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MANATO ITO | BLOG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/hamburger-menu.css">
+</head>
+<body>
+    <header class="layout-header visual-header">
+        <p class="layout-logo visual-logo">MANATO ITO</p>
+        <!-- 動的に内容を追加するナビゲーションテンプレート -->
+        <template class="template-nav-content">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </template>
+        <!-- PC用ナビゲーション -->
+        <nav class="layout-pc-nav visual-pc-nav template-nav pc-design"></nav>
+        <!-- タブレット&モバイル用ナビゲーション -->
+        <nav class="layout-mobile-nav visual-mobile-nav template-nav tablet-design mobile-design">
+            <input type="checkbox" id="nav-btn" class="nav-btn">
+            <label for="nav-btn" class="nav-icon-wrapper">
+                <span class="nav-icon-inner"></span>
+            </label>
+        </nav>
+    </header>
+    <main></main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
