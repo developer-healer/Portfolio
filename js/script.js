@@ -1,12 +1,26 @@
-window.addEventListener('DOMContentLoaded', function(){
-    let template_nav_content = document.getElementsByClassName('template-nav-content')[0];
-    let template_nav_list = document.getElementsByClassName('template-nav');
+window.addEventListener('DOMContentLoaded', function() {
+    // template-nav-content と template-nav の DOM 要素を取得
+    let templateNavContent = document.querySelector('.template-nav-content');
+    let templateNavList = document.querySelectorAll('.template-nav');
 
-    for(let count = 0; count < template_nav_list.length; count++) {
-        let template_nav_content_cpy = template_nav_content.content.cloneNode(true);
-        template_nav_list[count].appendChild(template_nav_content_cpy);
+    // .template-nav-content の内容を各 .template-nav に追加
+    templateNavList.forEach(nav => {
+        let clonedContent = templateNavContent.content.cloneNode(true);
+        nav.appendChild(clonedContent);
+    });
+
+    // 現在のページが "index.html" である場合、背景動画の再生速度を調整
+    if (location.pathname.endsWith('index.html')) {
+        let backgroundVideoElement = document.querySelector('.bg-video');
+        if (backgroundVideoElement) {
+            backgroundVideoElement.playbackRate = 0.9;
+        }
     }
-
-    let background_video_element = document.getElementsByClassName('layout-bg-video')[0];
-    background_video_element.playbackRate = 0.9;
 });
+
+// スクロール無効化（Ctrl + スクロール）
+document.addEventListener('wheel', function (event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+}, { passive: false });

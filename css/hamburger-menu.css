@@ -1,18 +1,23 @@
 /* タブレット&モバイル対応 */
 @media screen and (max-width: 860px) {
+    /* メニュー開閉アニメーション */
     .nav-btn:checked + label + ul {
         transform: scale(1, 1);
         transform-origin: top;
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
+
     .nav-btn:checked + label + ul a,
     .nav-btn:checked + label + ul li {
         opacity: 1;
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
     }
+
+    /* ボタンとアイコン */
     .nav-btn {
         display: none;
     }
+
     .nav-icon-wrapper {
         display: inline-block;
         position: relative;
@@ -20,6 +25,7 @@
         padding: 1rem 0.7rem 0.7rem 0.7rem;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+
     .nav-icon-inner {
         background: #ddd;
         display: block;
@@ -28,7 +34,9 @@
         position: relative;
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
-    .nav-icon-inner:before, .nav-icon-inner:after {
+
+    .nav-icon-inner:before,
+    .nav-icon-inner:after {
         content: "";
         display: block;
         height: 100%;
@@ -37,59 +45,48 @@
         background: #ddd;
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
+
     .nav-icon-inner:before {
         top: 0.5rem;
     }
+
     .nav-icon-inner:after {
         bottom: 0.5rem;
     }
+
+    /* アイコンの変化（開閉時） */
     .nav-btn:checked ~ .nav-icon-wrapper .nav-icon-inner:before {
         transform: rotate(-45deg);
     }
+
     .nav-btn:checked ~ .nav-icon-wrapper .nav-icon-inner:after {
         transform: rotate(45deg);
     }
+
     .nav-btn:checked ~ .nav-icon-wrapper:not(.steps) .nav-icon-inner:before {
         top: 0;
     }
+
     .nav-btn:checked ~ .nav-icon-wrapper:not(.steps) .nav-icon-inner:after {
         bottom: 0;
     }
+
     .nav-btn:checked ~ .nav-icon-wrapper .nav-icon-inner {
         background: rgba(0, 0, 0, 0);
         transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
     }
 
+    /* ナビゲーションメニュー */
     .template-nav ul {
         list-style: none;
         position: absolute;
         width: 100%;
-        height: auto;
         top: 0;
         margin-top: 7vh;
         padding: 0 0 2rem 0;
-        clear: both;
         background: var(--background-navbar);
         transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
         transform: scale(1, 0);
         transform-origin: top;
     }
-    /*
-    .template-nav ul a {
-        text-decoration: none;
-        font-weight: 500;
-        letter-spacing: 2px;
-        font-size: 16px;
-        text-transform: capitalize;
-        color: #ddd;
-        opacity: 0;
-        transition: 0.5s;
-    }
-    .template-nav ul li {
-        border-top: 1px solid rgb(75, 75, 75);
-        padding: 15px 0;
-        margin: 0 54px;
-        opacity: 0;
-        transition: 0.5s;
-    }*/
 }

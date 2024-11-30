@@ -2,28 +2,30 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANATO ITO | HOME</title>
+    <link rel="icon" href="source/site_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/hamburger-menu.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-    <header class="layout-header visual-header">
-        <p class="layout-logo visual-logo">MANATO ITO</p>
+    <header class="header">
+        <p class="logo">MANATO ITO</p>
         <!-- 動的に内容を追加するナビゲーションテンプレート -->
         <template class="template-nav-content">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
                 <li><a href="./portfolio.html">Portfolio</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </template>
         <!-- PC用ナビゲーション -->
-        <nav class="layout-pc-nav visual-pc-nav template-nav pc-design"></nav>
+        <nav class="pc-nav template-nav pc-design" aria-label="PC Navigation"></nav>
         <!-- タブレット&モバイル用ナビゲーション -->
-        <nav class="layout-mobile-nav visual-mobile-nav template-nav tablet-design mobile-design">
+        <nav class="mobile-nav template-nav tablet-design mobile-design" aria-label="Mobile Navigation">
             <input type="checkbox" id="nav-btn" class="nav-btn">
             <label for="nav-btn" class="nav-icon-wrapper">
                 <span class="nav-icon-inner"></span>
@@ -31,19 +33,19 @@
         </nav>
     </header>
     <main>
-        <section class="layout-home visual-home">
-            <div class="layout-bg-wrapper visual-bg-wrapper">
+        <section class="home">
+            <div class="bg-wrapper">
                 <!-- 背景動画と画像 -->
-                <video autoplay muted loop class="layout-bg-video visual-bg-video pc-design tablet-design">
-                    <source src="./source/home-bg-video.mp4" type="video/mp4">
+                <video autoplay muted loop class="bg-video pc-design tablet-design">
+                    <source src="./source/home_bg_video.mp4" type="video/mp4">
                 </video>
-                <img class="layout-bg-img visual-bg-img mobile-design" src="./source/home-bg-img.png" alt="背景画像">
+                <img class="bg-img mobile-design" src="./source/home_bg_img.png" alt="背景画像">
             </div>
-            <div class="layout-overlay visual-overlay">
+            <div class="overlay">
                 <h1 class="pc-design tablet-design">Welcome to My Portfolio</h1>
-                <h1 class="mobile-design">My Portfolio</h1>
+                <h1 class="mobile-design" aria-hidden="true">My Portfolio</h1>
                 <p>Explore My Work and Skills</p>
-                <a href="#" class="layout-home-btn visual-home-btn">Learn More</a>
+                <a href="./portfolio.html" class="home-btn">Learn More</a>
             </div>
         </section>
     </main>

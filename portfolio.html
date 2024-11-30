@@ -2,35 +2,124 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>MANATO ITO | PORTFOLIO</title>
+    <link rel="icon" href="source/site_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/hamburger-menu.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
 </head>
 <body>
-    <header class="layout-header visual-header">
-        <p class="layout-logo visual-logo">MANATO ITO</p>
+    <header class="header">
+        <p class="logo">MANATO ITO</p>
         <!-- 動的に内容を追加するナビゲーションテンプレート -->
         <template class="template-nav-content">
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./blog.html">Blog</a></li>
+                <!-- <li><a href="./blog.html">Blog</a></li> -->
                 <li><a href="./portfolio.html">Portfolio</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </template>
         <!-- PC用ナビゲーション -->
-        <nav class="layout-pc-nav visual-pc-nav template-nav pc-design"></nav>
+        <nav class="pc-nav template-nav pc-design"></nav>
         <!-- タブレット&モバイル用ナビゲーション -->
-        <nav class="layout-mobile-nav visual-mobile-nav template-nav tablet-design mobile-design">
+        <nav class="mobile-nav template-nav tablet-design mobile-design">
             <input type="checkbox" id="nav-btn" class="nav-btn">
             <label for="nav-btn" class="nav-icon-wrapper">
                 <span class="nav-icon-inner"></span>
             </label>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <div class="banner-wrapper">
+            <img class="banner-img" src="./source/portfolio_banner.png" alt="バナー画像">
+        </div>
+        <section class="introduction">
+            <h2 class="section-title">INTRODUCTION</h2>
+            <div class="introduction-wrapper">
+                <img class="profile-icon" src="./source/profile_icon.png" alt="プロフィール画像">
+                <div class="introduction-content">
+                    <p>こんにちは。MANATOと申します。<br><br>
+                    高等専門学校の「情報システム工学科」を卒業後、カメラ・複合機の電気機器企業にてエンジニアをしております。
+                    高等専門学校では継続年数 5年間にわたって情報工学系の幅広い知識を身に着けました。<br>
+                    また学生時代はNHKロボコンの出場に向けてチーム活動をしており、<br>
+                    ロボット制御に関するハードウェア開発や機械加工、電気工作に携わっておりました。<br>
+                    現在は勤め先の設計開発部門にて、カメラのCMOSセンサーの設計に携わっております。<br><br>
+                    さまざまなプログラミング言語を扱うことができ、Python, C言語, Javaなど多岐にわたります。<br>
+                    神奈川県 在住。趣味はプログラミング、ドラマ鑑賞。<br>
+                    最近はアセンブリ言語のシミュレータの開発に熱中しております。<br><br>
+                    ロボット制御や通信制御などのハードウェア開発から、機械学習やデータ分析、WEB制作などのソフトウェア開発まで、柔軟に対応できることが私の強みです。
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skill">
+            <h2 class="section-title">SKILL</h2>
+            <div class="skills-list">
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">Python</h2>
+                    <p class="skill-duration skill-duration">継続年数 5年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">C</h2>
+                    <p class="skill-duration skill-duration">継続年数 7年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">C++</h2>
+                    <p class="skill-duration skill-duration">継続年数 2年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">C#</h2>
+                    <p class="skill-duration skill-duration">継続年数 1年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">Java</h2>
+                    <p class="skill-duration skill-duration">継続年数 5年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">HTML</h2>
+                    <p class="skill-duration skill-duration">継続年数 5年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">CSS</h2>
+                    <p class="skill-duration skill-duration">継続年数 5年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">JavaScript</h2>
+                    <p class="skill-duration skill-duration">継続年数 5年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" alt="Bash" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">Bash</h2>
+                    <p class="skill-duration skill-duration">継続年数 7年</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" class="skill-icon skill-icon">
+                    <h2 class="skill-name skill-name">SQL</h2>
+                    <p class="skill-duration skill-duration">継続年数 1年</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-links">
+            <p class="follow-me">FOLLOW MY GITHUB</p>
+            <a href="https://github.com/developer-healer" class="github-link">
+                <img class="github-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+            </a>
+        </div>
+        <p class="copyright">© 2024 MANATO ITO</p>
+    </footer>
     <script src="./js/script.js"></script>
 </body>
 </html>

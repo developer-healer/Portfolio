@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+/* CSS変数定義 */
+:root {
+    --background-color: #F5F5F5;
+}
+
+/* 基本スタイル */
+html {
+    font-size: clamp(8px, 1.6vw, 16px);
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: 'Orbitron', sans-serif;
+    box-sizing: border-box;
+}
+
+/* レスポンシブ切り替え */
+.pc-design, .tablet-design, .mobile-design {
+    display: none;
+}
+
+.pc-design {
+    display: block;
+}
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #101010;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* ナビゲーション */
+.pc-nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.pc-nav ul li {
+    list-style: none;
+    margin-right: 4vw;
+}
+
+.pc-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.pc-nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #101010;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.follow-me{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.github-icon {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(0) invert(1);
+}
+
+.copyright {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* タブレット対応 */
+@media screen and (max-width: 860px) {
+    .pc-design {
+        display: none;
+    }
+    .tablet-design {
+        display: block;
+    }
+
+    .header {
+        padding-left: 3vw;
+        flex-direction: row-reverse;
+        justify-content: left;
+        height: 8vh;
+        position: fixed;
+    }
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 480px) {
+    .pc-design, .tablet-design {
+        display: none;
+    }
+    .mobile-design {
+        display: block;
+    }
+
+    .header {
+        height: 7vh;
+        padding-left: 3vw;
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+}

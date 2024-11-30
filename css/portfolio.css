@@ -1,0 +1,92 @@
+/* css変数定義 */
+:root {
+    --skill_item_width: 20vw;
+    --skill_item_height: 20vw;
+}
+
+/* バナー */
+.banner-wrapper {
+    width: 100%;
+    height: 20vh;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* セクション */
+section {
+    margin: 10vh 13vw;
+}
+
+/* 紹介セクション */
+.introduction-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #19232E;
+}
+
+/* プロフィールアイコン */
+.profile-icon {
+    width: 30rem;
+    height: 30rem;
+}
+
+/* 紹介コンテンツ */
+.introduction-content p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* スキルリスト */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3vw;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+/* スキルカード */
+.skill-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: auto;
+}
+
+/* スキルアイコン */
+.skill-icon {
+    width: 80px;
+    height: auto;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/* スキル名 */
+.skill-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 1rem 0;
+}
+
+/* スキル期間 */
+.skill-duration {
+    font-size: 1.15rem;
+    color: #656F70;
+    font-family: 'Noto Sans JP', sans-serif;
+}
