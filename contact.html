@@ -6,8 +6,9 @@
     <title>MANATO ITO | CONTACT</title>
     <link rel="icon" href="source/site_icon.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./css/hamburger-menu.css">
+    <link rel="stylesheet" href="./css/contact.css">
 </head>
 <body>
     <header class="header">
@@ -32,7 +33,40 @@
         </nav>
     </header>
     <main>
-        <!-- 連絡先フォームやその他の主要コンテンツをここに挿入 -->
+        <section class="contact-form">
+            <div class="contact-content">
+                <div class="content-inner">
+                    <h2>お問い合わせ</h2>
+                    <p>お問い合わせは、こちらにのフォームにお願いいたします。<br>
+                        平日 17:30 ~ 21:30 / 土日祝 8:00 ~ 21:30 は連絡可能です。</p>
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <form>
+                    <div class="input-name">
+                        <div>
+                            <label for="first-name">姓 (全角)</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div>
+                            <label for="last-name">名 (全角)</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">メール</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="message-box">
+                        <label for="message">問い合わせ内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="submit-button-wrapper">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer-links">
